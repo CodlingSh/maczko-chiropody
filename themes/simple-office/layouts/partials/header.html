@@ -1,0 +1,37 @@
+<div class="max-w-full mx-auto flex items-center justify-center h-[190px]">
+    <a href ="/" class="h-[50%]"><img src="/images/logo.jpg" class="h-[100%]"/></a>
+</div>
+
+<div class="z-40 bg-white sticky top-0 px-[10px] h-[40px] lg:h-[60px] flex justify-between border-b border-b-black">
+    <div class="max-w-full w-[100%] mx-auto flex justify-between items-center">
+        {{ range .Site.Menus.main }}
+            <a href="{{ .URL }}" class="text-[22px] font-medium">{{ .Name }}</a>
+        {{ end }}
+    </div>  
+</div>
+
+    {{/*  <div class="px-[10px] border-b border-b-black">
+        <div class="max-w-full h-[40px] lg:h-[100px] mx-auto flex items-center justify-between">
+            <nav class="flex gap-[30px] h-[100%] max-w-full w-[100%]">
+                <div class="hidden md:flex items-center w-[100%] justify-between mx-auto">
+                    {{ range .Site.Menus.main }}
+                        <a href="{{ .URL }}" class="text-[22px] font-medium">{{ .Name }}</a>
+                    {{ end }}
+                </div>
+            </nav>
+        </div>
+    </div>  */}}
+<header class=""></header>
+
+
+<div class="fixed md:hidden w-[100%] -translate-y-full bg-white z-30">
+    {{ range .Site.Menus.main }}
+    <a href="{{ .URL }}" class="block w-[100%] font-medium text-[20px] py-[10px] text-center border-2 border-t-gray-300">{{ .Name }}</a>
+    {{ end }}
+</div>
+
+<div id="opacity_layer" class="z-20"></div>
+{{/*  <a href ="/" class="h-[60%]"><img src="images/logo.jpg" class="h-[100%]"/></a>  */}}
+
+{{/*  <div class="flex items-center justify-center h-[100%] "><img src="images/burger.svg" class="md:hidden w-[40px] h-[60%]" /></div>  */}}
+{{/*  <div id="burger" class="lg:hidden w-[40px] h-[100%] text-[38px]"><h3>☰</h3></div>  */}}

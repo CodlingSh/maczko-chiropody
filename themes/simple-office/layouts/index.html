@@ -1,0 +1,15 @@
+{{ define "main" }}
+
+{{ partial "hero.html" . }}
+<div class="h-[40px] bg-emerald-400 mb-[60px]"></div>
+<p class="text-center text-[20px]">Are you visiting the office for the first time? Download and complete this form and bring it with you.</p>
+<p class="text-center text-[20px]">We are now on Facebook! Like our page to keep up to date on the latest foot care products and advice.</p>
+{{ $pages := where .Site.Pages "Section" "home" }}
+    {{ range $pages }}
+        <div class="h-[1px] max-w-screen bg-gray-400 mb-[20px]"></div>
+        <article class="max-w-full mb-[60px] mx-auto px-10">
+            <h2 class="mb-[10px] text-center font-bold underline text-2xl">{{ .Title }}</h2>
+            <p>{{ .Content }}</p>
+        </article> <!-- Display post summary or content as needed -->
+    {{ end }}
+{{ end }}

@@ -1,0 +1,13 @@
+{{ define "main" }}
+
+    <div class="h-[40px] bg-emerald-400 mb-[60px]"></div>
+
+{{ $pages := where .Site.Pages "Section" "about" }}
+    {{ range $pages }}
+        <article class="max-w-full mb-[60px] px-[40px] mx-auto">
+            <h2>{{ .Title }}</h2>
+            <p>{{ .Content }}</p>
+        </article> <!-- Display post summary or content as needed -->
+    {{ end }}
+
+{{ end }}
