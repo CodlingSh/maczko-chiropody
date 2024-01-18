@@ -5,11 +5,13 @@ module.exports = {
     extend: {
       colors: {
         "white": "#F0F0F0",
-        "green": "#00FF00",
+        "green-l": "#57FF6C",
+        "green-m": "#2C9F2A",
+        "green-h": "#03610C",
         "gray": "#C0C0C0"
       },
       height: {
-        "hero-image": "calc(100vh - 290px)"
+        "hero-image": "78.016vh"
       },
       maxWidth: {
         "full": "1000px"

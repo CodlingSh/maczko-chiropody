@@ -1,7 +1,8 @@
 {{ define "main" }}
 
+{{/*  <div class="h-[30px] bg-green-l"></div>  */}}
 {{ partial "hero.html" . }}
-<div class="h-[40px] bg-emerald-400 mb-[60px]"></div>
+<div class="h-[3.579vh] bg-green-m mb-[60px]"></div>
 <p class="text-center text-[20px]">Are you visiting the office for the first time? Download and complete this form and bring it with you.</p>
 <p class="text-center text-[20px]">We are now on Facebook! Like our page to keep up to date on the latest foot care products and advice.</p>
 {{ range (where .Site.RegularPages "Type" "in" "home") }}
