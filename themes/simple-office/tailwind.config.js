@@ -5,7 +5,8 @@ module.exports = {
     extend: {
       colors: {
         "white": "#F0F0F0",
-        "green": "#00FF00"
+        "green": "#00FF00",
+        "gray": "#C0C0C0"
       },
       height: {
         "hero-image": "calc(100vh - 290px)"
