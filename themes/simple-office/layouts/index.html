@@ -3,13 +3,13 @@
 {{/*  <div class="h-[30px] bg-green-l"></div>  */}}
 {{ partial "hero.html" . }}
 <div class="h-[3.579vh] bg-green-m mb-[60px]"></div>
-<p class="text-center text-[20px]">Are you visiting the office for the first time? Download and complete this form and bring it with you.</p>
-<p class="text-center text-[20px]">We are now on Facebook! Like our page to keep up to date on the latest foot care products and advice.</p>
+<p class="text-center text-[1.25rem]">Are you visiting the office for the first time? Download and complete this form and bring it with you.</p>
+<p class="text-center text-[1.25rem]">We are now on Facebook! Like our page to keep up to date on the latest foot care products and advice.</p>
 {{ range (where .Site.RegularPages "Type" "in" "home") }}
     <article class="max-w-full mb-[6em] mx-auto px-10">
         <div class="flex justify-between items-center mb-[1.5em]">
             <div class="h-[5px] w-[100%] bg-gray"></div>
-            <h2 class="mb-[0px] text-center font-bold text-2xl whitespace-nowrap px-[20px]">{{ .Title | upper }}</h2>
+            <h2 class="mb-[0px] text-center font-bold text-2xl whitespace-nowrap px-[20px] font-condensed">{{ .Title | upper }}</h2>
             <div class="h-[5px] w-[100%] bg-gray"></div>
         </div>
         {{ $image := resources.Get (printf "images/%s" .Params.image_name) }}

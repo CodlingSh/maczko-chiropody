@@ -1,8 +1,17 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,700italic|Open+Sans+Condensed:700");
 
+
+body {
+    font-family: "Open Sans", sans-serif;
+}
 
 p:not(:last-child), h1, h2, h3, h4, h5, h6 {
     margin-bottom: 1.5rem;
+}
+
+.hero-sect-bg {
+    background-color: rgba(21, 28, 23, 0.85);
 }
