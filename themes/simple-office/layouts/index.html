@@ -6,12 +6,13 @@
 <p class="text-center text-[1.25rem]">Are you visiting the office for the first time? Download and complete this form and bring it with you.</p>
 <p class="text-center text-[1.25rem]">We are now on Facebook! Like our page to keep up to date on the latest foot care products and advice.</p>
 {{ range (where .Site.RegularPages "Type" "in" "home") }}
-    <article class="max-w-full mb-[6em] mx-auto px-10">
-        <div class="flex justify-between items-center mb-[1.5em]">
+    <article class="max-w-full mb-[6em] mx-auto">
+        <div class="mb-[1.5em] lg:flex justify-between items-center">
             <div class="h-[5px] w-[100%] bg-gray"></div>
-            <h2 class="mb-[0px] text-center font-bold text-2xl whitespace-nowrap px-[20px] font-condensed">{{ .Title | upper }}</h2>
+            <h2 class="m-[0px] text-center font-bold text-2xl px-[20px] font-condensed lg:whitespace-nowrap">{{ .Title | upper }}</h2>
             <div class="h-[5px] w-[100%] bg-gray"></div>
         </div>
+        <div class="px-[5%]">
         {{ $image := resources.Get (printf "images/%s" .Params.image_name) }}
         {{ if eq .Params.image_location "top" }}
             {{ with $image }}
@@ -28,9 +29,9 @@
             
         {{ else if eq .Params.image_location "left" }}
             {{ $image := $image.Resize "300x" }}
-            <div class="flex justify-around">
+            <div class="lg:flex justify-around">
                 {{ with $image }}
-                    <img src="{{ $image.RelPermalink }}" class="mx-auto pr-[1.5em]">
+                    <img src="{{ $image.RelPermalink }}" class="mx-auto lg:pr-[1.5em]">
                 {{ end }}
                 <div>
                     {{ .Content }}
@@ -39,17 +40,18 @@
 
         {{ else if eq .Params.image_location "right" }}
             {{ $image := $image.Resize "300x" }}
-            <div class="flex justify-around">
+            <div class="lg:flex justify-around">
                 <div>
                     {{ .Content }}
                 </div>
                 {{ with $image }}
-                    <img src="{{ $image.RelPermalink }}" class="mx-auto pl-[1.5em]">
+                    <img src="{{ $image.RelPermalink }}" class="mx-auto lg:pl-[1.5em]">
                 {{ end }}
             </div>
         {{ else }}
             {{ .Content }}
         {{ end }}
+        </div>
     </article> <!-- Display post summary or content as needed -->
 {{ end }}
 {{ end }}
