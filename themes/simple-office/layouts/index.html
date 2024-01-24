@@ -1,10 +1,11 @@
 {{ define "main" }}
 
-{{/*  <div class="h-[30px] bg-green-l"></div>  */}}
 {{ partial "hero.html" . }}
-<div class="h-[3.579vh] bg-green-m mb-[60px]"></div>
-<p class="text-center text-[1.25rem]">Are you visiting the office for the first time? Download and complete this form and bring it with you.</p>
-<p class="text-center text-[1.25rem]">We are now on Facebook! Like our page to keep up to date on the latest foot care products and advice.</p>
+<div class="h-[3.579vh] bg-green-m"></div>
+<div class="text-center bg-darker-white py-[40px] mb-[40px] border-b border-b-green-h">
+    <p class="text-[1.25rem]">Are you visiting the office for the first time? Download and complete this form and bring it with you.</p>
+    <p class="text-[1.25rem]">We are now on Facebook! Like our page to keep up to date on the latest foot care products and advice.</p>
+</div>
 {{ range (where .Site.RegularPages "Type" "in" "home") }}
     <article class="max-w-full mb-[6em] mx-auto">
         <div class="mb-[1.5em] lg:flex justify-between items-center">
@@ -54,9 +55,11 @@
         </div>
     </article> <!-- Display post summary or content as needed -->
 {{ end }}
-<div class="max-w-[930px] w-[90%] h-[300px] mx-auto flex flex-col justify-between items-center md:h-[100px] md:flex-row">
-    <img src="images/CFPM.png" alt="CFPM">
-    <img src="images/APMA.png" alt="APMA">
-    <img src="images/OSoC.png" alt="OSoC">
+<div class="w-full bg-darker-white border-t border-t-green-h">
+    <div class="max-w-[930px] w-[90%] h-[360px] mx-auto flex flex-col justify-between items-center md:h-[100px] md:flex-row">
+        <img src="images/CFPM.png" alt="CFPM" class="h-[25%] md:h-[80%]">
+        <img src="images/APMA.png" alt="APMA" class="h-[25%] md:h-[80%]">
+        <img src="images/OSoC.png" alt="OSoC" class="h-[25%] md:h-[80%]">
+    </div>
 </div>
 {{ end }}
