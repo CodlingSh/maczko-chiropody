@@ -832,12 +832,8 @@ body {
   font-family: "Open Sans", sans-serif;
 }
 
-/* p, h1, h2, h3, h4, h5, h6 {
-    margin-left: 5%;
-    margin-right: 5%;
-} */
-
-p:not(:last-child), h1, h2, h3, h4, h5, h6 {
+.article_content > *,
+.article_content > * > * {
   margin-bottom: 1.5rem;
 }
 

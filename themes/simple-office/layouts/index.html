@@ -13,24 +13,25 @@
             <h2 class="m-[0px] text-center font-bold text-2xl px-[20px] font-condensed lg:whitespace-nowrap">{{ .Title | upper }}</h2>
             <div class="h-[5px] w-[100%] bg-gray"></div>
         </div>
-        <div class="px-[5%]">
         {{ $image := resources.Get (printf "images/%s" .Params.image_name) }}
         {{ if eq .Params.image_location "top" }}
-            {{ with $image }}
-                <img src='{{ ( $image.Resize "800x" ).RelPermalink  }}' class="mx-auto pb-[1.5em]">
-            {{ end }}
-            {{ .Content }}
-
+            <div class="article_content px-[5%]">
+                {{ with $image }}
+                    <img src='{{ ( $image.Resize "800x" ).RelPermalink  }}' class="mx-auto pb-[1.5em]">
+                {{ end }}
+                {{ .Content }}
+            </div>
         {{ else if eq .Params.image_location "bottom" }}
-            {{ $image := $image.Resize "800x" }}
-            {{ .Content }}
-            {{ with $image }}
-                <img src="{{ $image.RelPermalink }}" class="mx-auto pu-[1.5em]">
-            {{ end }}
-            
+            <div class="article_content px-[5%]">
+                {{ $image := $image.Resize "800x" }}
+                {{ .Content }}
+                {{ with $image }}
+                    <img src="{{ $image.RelPermalink }}" class="mx-auto pu-[1.5em]">
+                {{ end }}
+            </div>
         {{ else if eq .Params.image_location "left" }}
             {{ $image := $image.Resize "300x" }}
-            <div class="lg:flex justify-around">
+            <div class="article_content px-[5%] lg:flex justify-around">
                 {{ with $image }}
                     <img src="{{ $image.RelPermalink }}" class="mx-auto lg:pr-[1.5em]">
                 {{ end }}
@@ -41,7 +42,7 @@
 
         {{ else if eq .Params.image_location "right" }}
             {{ $image := $image.Resize "300x" }}
-            <div class="lg:flex justify-around">
+            <div class="article_content px-[5%] lg:flex justify-around">
                 <div>
                     {{ .Content }}
                 </div>
@@ -50,7 +51,9 @@
                 {{ end }}
             </div>
         {{ else }}
-            {{ .Content }}
+            <div class="article_content px-[5%]">
+                {{ .Content }}
+            </div>
         {{ end }}
         </div>
     </article> <!-- Display post summary or content as needed -->
