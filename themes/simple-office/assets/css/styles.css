@@ -16,3 +16,14 @@ body {
 .hero-sect-bg {
     background-color: rgba(21, 28, 23, 0.85);
 }
+
+#nav_menu:before {
+    content: "";
+    border-left: 15px solid transparent;
+    border-bottom: 15px solid #f0f0f0;
+    border-right: 15px solid transparent;
+    position: absolute;
+    right: 6px;
+    bottom: 99.5%;
+    z-index: 1000000;
+}
