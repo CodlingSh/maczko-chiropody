@@ -7,8 +7,9 @@ function navToggle() {
 
     // Disable to scrolling
     //TODO: Write this logic
+    document.body.classList.toggle("overflow-y-hidden");
 
-    // Turn on the opacity
+    // Toggle the opacity
     if (opacityLayer.classList.contains("opacity-0")) {
         opacityLayer.classList.add("opacity-50");
         opacityLayer.classList.remove("opacity-0");
@@ -19,9 +20,15 @@ function navToggle() {
         console.log("error");
     }
 
+    // Toggle the opacity layers pointer events
+    opacityLayer.classList.toggle("pointer-events-none");
+
     // Move the nav menu
     navMenu.classList.toggle("translate-x-72");
 }
 
 // Click events
 document.getElementById("burger").addEventListener("click", navToggle);
+document.getElementById("opacity_layer").addEventListener("click", navToggle);
+
+console.log(document.body.style.overflowY);
