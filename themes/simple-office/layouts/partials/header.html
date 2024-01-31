@@ -1,10 +1,10 @@
-<header class="z-20 bg-white top-0 h-[50px] border-b border-b-green-h sticky lg:h-[12.27vh]">
+<header class="z-20 bg-white top-0 h-[51px] border-b border-b-green-h sticky lg:h-[12.27vh]">
     <div class="w-[100%] max-w-[1200px] h-[100%] mx-auto flex items-center justify-between">
         <img src="/images/logo.png" class="h-[70%] block pl-[5px] md:pl-[0px]">
-        <div id="burger" class="z-30 h-[100%] w-[50px] bg-green-h flex items-center justify-center md:hidden">
-            <span></span>
-            <span></span>
-            <span></span>
+        <div id="burger" class="z-30 h-[100%] w-[50px] bg-green-h flex flex-col justify-between p-2 md:hidden">
+            <span id="top_bun" class="w-[100%] h-[5px] bg-white rounded-lg origin-left"></span>
+            <span id="patty" class="w-[100%] h-[5px] bg-white rounded-lg"></span>
+            <span id="bottom_bun" class="w-[100%] h-[5px] bg-white rounded-lg origin-left"></span>
         </div>
         <div class="hidden md:block">
             {{ range .Site.Menus.main }}

@@ -1,11 +1,17 @@
 {{ define "main" }}
 
-<div class="h-[3.579vh] bg-green-m"></div>
+<div class="mb-[1.5em] lg:flex justify-between items-center">
+    <div class="h-[5px] w-[100%] bg-gray"></div>
+    <h2 class="m-[0px] text-center font-bold text-2xl px-[20px] font-condensed lg:whitespace-nowrap">ABOUT US</h2>
+    <div class="h-[5px] w-[100%] bg-gray"></div>
+</div>
 
     {{ range (where .Site.RegularPages "Type" "in" "about")}}
         <article class="max-w-full mb-[60px] px-[40px] mx-auto">
-            <h2>{{ .Title }}</h2>
-            <p>{{ .Content }}</p>
+            <div class="article_content px-[5%]">
+                <h2>{{ .Title }}</h2>
+                <p>{{ .Content }}</p>
+            </div>
         </article> <!-- Display post summary or content as needed -->
     {{ end }}
 
