@@ -3,67 +3,28 @@
 {{ partial "hero.html" . }}
 <div class="h-[3.579vh] bg-green-m"></div>
 
-<div class="text-center bg-darker-white py-[40px] mb-[40px] border-b border-b-green-h">
-    <p class="text-[1.25rem]">Are you visiting the office for the first time? Download and complete this form and bring it with you.</p>
-    <p class="text-[1.25rem]">We are now on Facebook! Like our page to keep up to date on the latest foot care products and advice.</p>
-</div>
 {{ range (where .Site.RegularPages "Type" "in" "home") }}
-    <article class="max-w-full mb-[6em] mx-auto">
-        <div class="mb-[1.5em] lg:flex justify-between items-center">
-            <div class="h-[5px] w-[100%] bg-gray"></div>
-            <h2 class="m-[0px] text-center font-bold text-2xl px-[20px] font-condensed lg:whitespace-nowrap">{{ .Title | upper }}</h2>
-            <div class="h-[5px] w-[100%] bg-gray"></div>
+{{ $image := resources.Get (printf "images/%s" .Params.image_name) }}
+<section class="max-w-[1320px] w-[90%] mx-auto">
+    {{/*  <div class="mb-[1.5em] lg:flex justify-between items-center">
+        <div class="h-[5px] w-[100%] bg-gray"></div>
+        <h2 class="m-[0px] text-center font-bold text-2xl px-[20px] font-condensed lg:whitespace-nowrap">{{ .Title | upper }}</h2>
+        <div class="h-[5px] w-[100%] bg-gray"></div>
+    </div>  */}}
+    {{ if eq .Params.image_location "left" }}
+        <div class="flex justify-between items-center">
+    {{ else if eq .Params.image_location "right" }}
+        <div class="flex justify-between items-center flex-row-reverse">
+    {{ end }}
+            
+            <div class="max-w-[600px] w-[90%]">
+                <h2 class="text-[2.5rem] text-green-h font-extrabold">{{ .Title }}</h2>
+                <div class="h-[5px] w-[95%] bg-gray mx-auto rounded-md"></div>
+                {{ .Content }}
+            </div>
+            {{ with $image }}<img src="{{ $image.RelPermalink }}" height="400" width="800" class="w-[90%] max-w-[630px] h-auto">{{ end }}
         </div>
-        {{ $image := resources.Get (printf "images/%s" .Params.image_name) }}
-        {{ if eq .Params.image_location "top" }}
-            <div class="article_content px-[5%]">
-                {{ with $image }}
-                    <img src='{{ ( $image.Resize "800x" ).RelPermalink  }}' class="mx-auto pb-[1.5em]">
-                {{ end }}
-                {{ .Content }}
-            </div>
-        {{ else if eq .Params.image_location "bottom" }}
-            <div class="article_content px-[5%]">
-                {{ $image := $image.Resize "800x" }}
-                {{ .Content }}
-                {{ with $image }}
-                    <img src="{{ $image.RelPermalink }}" class="mx-auto pu-[1.5em]">
-                {{ end }}
-            </div>
-        {{ else if eq .Params.image_location "left" }}
-            {{ $image := $image.Resize "300x" }}
-            <div class="article_content px-[5%] lg:flex justify-around">
-                {{ with $image }}
-                    <img src="{{ $image.RelPermalink }}" class="mx-auto lg:pr-[1.5em]">
-                {{ end }}
-                <div>
-                    {{ .Content }}
-                </div>
-            </div>
-
-        {{ else if eq .Params.image_location "right" }}
-            {{ $image := $image.Resize "300x" }}
-            <div class="article_content px-[5%] lg:flex justify-around">
-                <div>
-                    {{ .Content }}
-                </div>
-                {{ with $image }}
-                    <img src="{{ $image.RelPermalink }}" class="mx-auto lg:pl-[1.5em]">
-                {{ end }}
-            </div>
-        {{ else }}
-            <div class="article_content px-[5%]">
-                {{ .Content }}
-            </div>
-        {{ end }}
-        </div>
-    </article> <!-- Display post summary or content as needed -->
+</section>
 {{ end }}
-<div class="w-full bg-darker-white border-t border-t-green-h">
-    <div class="max-w-[930px] w-[90%] h-[360px] mx-auto flex flex-col justify-between items-center md:h-[100px] md:flex-row">
-        <img src="images/CFPM.png" alt="CFPM" class="h-[25%] md:h-[80%]">
-        <img src="images/APMA.png" alt="APMA" class="h-[25%] md:h-[80%]">
-        <img src="images/OSoC.png" alt="OSoC" class="h-[25%] md:h-[80%]">
-    </div>
-</div>
+
 {{ end }}

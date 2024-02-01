@@ -22,7 +22,6 @@ module.exports = {
       },
       fontFamily: {
         custom: ['Open Sans', 'sans-serif'],
-        condensed: ['Open Sans Condensed', 'sans-serif']
       }
     },
   },
