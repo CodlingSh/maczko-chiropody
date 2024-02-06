@@ -5,6 +5,7 @@ image_name: "null"
 image_location: "null"
 weight: 9999
 draft: false
+headless: true
 ---
 
 Maczko Chiropody & Orthotic Centre  is open and welcoming new and existing patients into our office for professional foot health assessments and treatments, as per regulations from the Ministry of Health of Ontario and the College of Chiropodists of Ontario.

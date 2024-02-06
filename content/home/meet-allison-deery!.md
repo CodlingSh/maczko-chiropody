@@ -5,6 +5,7 @@ image_name: "allison.jpg"
 image_location: "right"
 weight: 9999
 draft: false
+headless: true
 ---
 
 We would like to formally welcome Allison Deery to the team. She is our newest chiropodist that graduated from the Chiropody program. Allie has a passion for diabetic foot care and biomechanical assessments.
