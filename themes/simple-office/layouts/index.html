@@ -5,12 +5,11 @@
 
 {{ range (where .Site.RegularPages "Type" "in" "home") }}
 {{ $image := resources.Get (printf "images/%s" .Params.image_name) }}
+{{ with $image }}
+    {{/*  {{ $image = $image.Process "webp"}}  */}}
+    {{ $image = $image.Resize "630x" }}
+{{ end }}
 <section class="max-w-[1320px] w-[90%] mx-auto">
-    {{/*  <div class="mb-[1.5em] lg:flex justify-between items-center">
-        <div class="h-[5px] w-[100%] bg-gray"></div>
-        <h2 class="m-[0px] text-center font-bold text-2xl px-[20px] font-condensed lg:whitespace-nowrap">{{ .Title | upper }}</h2>
-        <div class="h-[5px] w-[100%] bg-gray"></div>
-    </div>  */}}
     {{ if eq .Params.image_location "left" }}
         <div class="flex justify-between items-center">
     {{ else if eq .Params.image_location "right" }}
@@ -22,7 +21,7 @@
                 <div class="h-[5px] w-[95%] bg-gray mx-auto rounded-md"></div>
                 {{ .Content }}
             </div>
-            {{ with $image }}<img src="{{ $image.RelPermalink }}" height="400" width="800" class="w-[90%] max-w-[630px] h-auto">{{ end }}
+            {{ with $image }}<img src="{{ $image.RelPermalink }}" class="w-[90%] max-w-[630px] h-auto">{{ end }}
         </div>
 </section>
 {{ end }}
