@@ -9,7 +9,8 @@ module.exports = {
         "green-l": "#57FF6C",
         "green-m": "#2C9F2A",
         "green-h": "#03610C",
-        "gray": "#C0C0C0"
+        "gray": "#A2AF9F",
+        "dark-gray": "#222E50"
       },
       height: {
         "hero-image": "78.016vh"
@@ -21,7 +22,7 @@ module.exports = {
         "hero-image": "url('/images/hero.jpg)"
       },
       fontFamily: {
-        custom: ['Open Sans', 'sans-serif'],
+        custom: ['Open Sans', 'sans-serif']
       }
     },
   },
