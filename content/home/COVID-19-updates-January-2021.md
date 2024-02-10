@@ -2,7 +2,6 @@
 title: "COVID 19 Updates January 2021"
 date: 2024-01-14T23:20:45-05:00
 image_name: "null"
-image_location: "null"
 weight: 9999
 draft: true
 headless: true

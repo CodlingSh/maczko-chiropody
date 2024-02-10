@@ -2,8 +2,7 @@
 title: "Healthier Feet, One Step at a Time"
 date: 2024-01-15T23:58:51-05:00
 image_name: "chiro.jpg"
-image_location: "left"
-weight: 9999
+weight: 1
 draft: false
 headless: true
 ---

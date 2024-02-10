@@ -2,7 +2,6 @@
 title: "Office Air Purification to Help You Breathe Easier"
 date: 2024-01-14T23:16:22-05:00
 image_name: "null"
-image_location: "null"
 weight: 9999
 draft: true
 headless: true

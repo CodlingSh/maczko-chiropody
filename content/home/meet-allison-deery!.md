@@ -2,8 +2,7 @@
 title: "Meet Allison Deery!"
 date: 2024-01-14T23:32:02-05:00
 image_name: "Allison.png"
-image_location: "right"
-weight: 9999
+weight: 2
 draft: false
 headless: true
 ---
