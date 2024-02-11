@@ -3,27 +3,41 @@
 {{ partial "hero.html" . }}
 <div class="h-[3.579vh] bg-green-m"></div>
 
-{{ range (where .Site.RegularPages "Type" "in" "home") }}
-{{ $image := resources.Get (printf "images/%s" .Params.image_name) }}
+{{ $homePosts := (where .Site.RegularPages "Type" "in" "home") }}
+{{ range $index, $homePost := $homePosts }}
+{{ $image := resources.Get (printf "images/%s" $homePost.Params.image_name) }}
 {{ with $image }}
-    {{/*  {{ $image = $image.Process "webp"}}  */}}
-    {{ $image = $image.Resize "630x" }}
+    {{/*  {{ $image = $image.ToWebp }}  */}}
+    {{ $image = $image.Resize "600x jpg" }}
 {{ end }}
-<section class="max-w-[1320px] w-[90%] mx-auto">
-    {{ if eq .Params.image_location "left" }}
-        <div class="flex justify-between items-center">
-    {{ else if eq .Params.image_location "right" }}
-        <div class="flex justify-between items-center flex-row-reverse">
+{{/*  <section class="max-w-[1320px] w-[90%] mx-auto my-[11rem]">  */}}
+    {{ if eq (mod $index 2) 0 }}
+    <section class="max-w-[1320px] w-[95%] mx-auto mt-[2rem] mb-[6rem] lg:my-[11rem] flex flex-col justify-between items-start lg:flex-row">
+    {{ else if eq (mod $index 2) 1 }}
+    <section class="max-w-[1320px] w-[95%] mx-auto mt-[2rem] mb-[6rem] lg:my-[11rem] flex flex-col justify-between items-start lg:flex-row-reverse">
     {{ end }}
-            
-            <div class="max-w-[600px] w-[90%]">
-                <h2 class="text-[2.5rem] text-green-h font-extrabold">{{ .Title }}</h2>
-                <div class="h-[5px] w-[95%] bg-gray mx-auto rounded-md"></div>
-                {{ .Content }}
+            <div class="max-w-[600px] article_content">
+                <h2 class="text-[2.5rem] w-[95%] mx-auto text-center text-green-h font-extrabold">{{ $homePost.Title }}</h2>
+                <div class="h-[5px] bg-gray rounded-md"></div>
+                {{ $homePost.Content }}
             </div>
-            {{ with $image }}<img src="{{ $image.RelPermalink }}" class="w-[90%] max-w-[630px] h-auto">{{ end }}
+            {{ if $image }}
+                {{ if eq (mod $index 2) 0 }}
+                <img src="{{ $image.RelPermalink }}" class="w-[90%] max-w-[600px] h-auto rounded-2xl border-dark-gray mx-auto lg:ml-[3rem]">
+                {{ else if eq (mod $index 2) 1 }}
+                <img src="{{ $image.RelPermalink }}" class="w-[90%] max-w-[600px] h-auto rounded-2xl border-dark-gray mx-auto lg:mr-[3rem]">
+                {{ end }}
+            {{ end }}
         </div>
 </section>
 {{ end }}
+
+<div class="w-full bg-darker-white border-t border-t-dark-gray">
+    <div class="max-w-[930px] w-[90%] h-[360px] mx-auto flex flex-col justify-between items-center md:h-[100px] md:flex-row">
+        <img src="images/CFPM.png" alt="CFPM" class="h-[25%] md:h-[80%]">
+        <img src="images/APMA.png" alt="APMA" class="h-[25%] md:h-[80%]">
+        <img src="images/OSoC.png" alt="OSoC" class="h-[25%] md:h-[80%]">
+    </div>
+</div>
 
 {{ end }}
