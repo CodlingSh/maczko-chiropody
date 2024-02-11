@@ -3,8 +3,11 @@
 @import 'tailwindcss/utilities';
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
 
-.article_content > *,
-.article_content > * > * {
+.article_content > * {
+    margin-bottom: 0.75rem
+}
+
+.article_content > p {
     margin-bottom: 1.5rem;
 }
 
