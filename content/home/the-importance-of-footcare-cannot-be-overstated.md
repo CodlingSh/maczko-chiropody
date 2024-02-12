@@ -1,7 +1,7 @@
 ---
 title: "The Importance of Footcare Cannot Be Overstated"
 date: 2024-02-10T18:12:51-05:00
-image_name: "null"
+image_name: "items.jpg"
 weight: 3
 draft: false
 headless: true
