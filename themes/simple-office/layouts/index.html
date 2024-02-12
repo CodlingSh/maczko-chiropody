@@ -3,6 +3,7 @@
 {{ partial "hero.html" . }}
 <div class="h-[3.579vh] bg-green-m"></div>
 
+{{/*  Sections + media  */}}
 {{ $homePosts := (where .Site.RegularPages "Type" "in" "home") }}
 {{ range $index, $homePost := $homePosts }}
 {{ $image := resources.Get (printf "images/%s" $homePost.Params.image_name) }}
@@ -10,7 +11,6 @@
     {{/*  {{ $image = $image.ToWebp }}  */}}
     {{ $image = $image.Resize "600x jpg" }}
 {{ end }}
-{{/*  <section class="max-w-[1320px] w-[90%] mx-auto my-[11rem]">  */}}
     {{ if eq (mod $index 2) 0 }}
     <section class="max-w-[1320px] w-[95%] mx-auto mt-[2rem] mb-[6rem] lg:my-[11rem] flex flex-col justify-between items-start lg:flex-row">
     {{ else if eq (mod $index 2) 1 }}
@@ -23,14 +23,17 @@
             </div>
             {{ if $image }}
                 {{ if eq (mod $index 2) 0 }}
-                <img src="{{ $image.RelPermalink }}" class="w-[90%] max-w-[600px] h-auto rounded-2xl border-dark-gray mx-auto lg:ml-[3rem]">
+                <img src="{{ $image.RelPermalink }}" class="w-[90%] max-w-[600px] h-auto rounded-2xl border-dark-gray mx-auto lg:ml-[3rem] lg:mx-0">
                 {{ else if eq (mod $index 2) 1 }}
-                <img src="{{ $image.RelPermalink }}" class="w-[90%] max-w-[600px] h-auto rounded-2xl border-dark-gray mx-auto lg:mr-[3rem]">
+                <img src="{{ $image.RelPermalink }}" class="w-[90%] max-w-[600px] h-auto rounded-2xl border-dark-gray mx-auto lg:mr-[3rem] lg:mx-0">
                 {{ end }}
             {{ end }}
         </div>
 </section>
 {{ end }}
+
+{{/*  Services  */}}
+
 
 <div class="w-full bg-darker-white border-t border-t-dark-gray">
     <div class="max-w-[930px] w-[90%] h-[360px] mx-auto flex flex-col justify-between items-center md:h-[100px] md:flex-row">
