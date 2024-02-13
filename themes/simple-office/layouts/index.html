@@ -33,6 +33,24 @@
 {{ end }}
 
 {{/*  Services  */}}
+<section class="mb-[6rem] lg:my-[11rem]">
+    <div class="mx-auto w-fit">
+        <h2 class="text-[2.5rem] mx-auto text-center text-green-h font-extrabold whitespace-nowrap">Our Services</h2>
+        <div class="h-[5px] bg-gray rounded-md"></div>
+    </div>
+    <div class="grid grid-cols-1 gap-4 mx-auto w-fit sm:grid-cols-2 xl:grid-cols-4">
+    {{/*  <section class="flex justify-between flex-wrap max-w-[1320px] w-[95%] mx-auto">  */}}
+        {{ $servicePosts := (where .Site.RegularPages "Type" "services") }}
+        {{ range $index, $servicePost := $servicePosts }}
+        <div class="w-[90vw] max-w-[312px] p-4 border border-red-500">
+            <img>
+            <h2 class="text-center text-green-h font-extrabold">{{ $servicePost.Title}}</h2>
+            {{ $servicePost.Content }}
+            <button></button>
+        </div>
+        {{ end }}
+    </div>
+</section>
 
 
 <div class="w-full bg-darker-white border-t border-t-dark-gray">
