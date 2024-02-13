@@ -1,8 +1,8 @@
 ---
-name: "Gait Analysis"
+title: "Gait Analysis"
 image: ""
 date: 2024-02-11T23:48:20-05:00
-draft: true
+draft: false
 weight: 9999
 headless: true
 ---

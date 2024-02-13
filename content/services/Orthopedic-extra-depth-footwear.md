@@ -1,8 +1,8 @@
 ---
-name: "Orthopedic Extra Depth Footwear"
+title: "Orthopedic Extra Depth Footwear"
 image: ""
 date: 2024-02-11T23:49:08-05:00
-draft: true
+draft: false
 weight: 9999
 headless: true
 ---

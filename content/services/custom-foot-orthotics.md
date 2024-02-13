@@ -1,8 +1,8 @@
 ---
-name: "Custom Foot Orthotics"
+title: "Custom Foot Orthotics"
 image: ""
 date: 2024-02-11T23:48:41-05:00
-draft: true
+draft: false
 weight: 9999
 headless: true
 ---

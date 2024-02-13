@@ -1,8 +1,8 @@
 ---
-name: "Biomechanical Foot Health Assessments"
+title: "Biomechanical Foot Health Assessments"
 image: ""
 date: 2024-02-11T23:47:18-05:00
-draft: true
+draft: false
 weight: 9999
 headless: true
 ---
