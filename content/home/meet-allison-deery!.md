@@ -10,4 +10,6 @@ headless: true
 We would like to formally welcome Allison Deery to the team. She is our newest chiropodist that graduated from the Chiropody program. Allie has a passion for diabetic foot care and biomechanical assessments.
 She is a Sarnia native whose interested in physical fitness, spending time with family and friends, and adding a furry companion in her near future!
 
-She is now accepting all new patients. Help us to warmly welcome our newest member of the team
+She is now accepting all new patients. Help us to warmly welcome our newest member of the team.
+
+{{< linkButtons text="Book Appointment" link="about" >}}
