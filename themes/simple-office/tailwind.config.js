@@ -22,7 +22,8 @@ module.exports = {
         "hero-image": "url('/images/hero.jpg)"
       },
       fontFamily: {
-        custom: ['Open Sans', 'sans-serif']
+        custom: ['Open Sans', 'sans-serif'],
+        condensed: ['Open Sans Condensed', 'sans-serif']
       }
     },
   },
