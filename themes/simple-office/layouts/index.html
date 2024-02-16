@@ -42,11 +42,20 @@
     {{/*  <section class="flex justify-between flex-wrap max-w-[1320px] w-[95%] mx-auto">  */}}
         {{ $servicePosts := (where .Site.RegularPages "Type" "services") }}
         {{ range $index, $servicePost := $servicePosts }}
-        <div class="w-[90vw] max-w-[312px] p-4 border border-red-500">
-            <img>
-            <h2 class="text-center text-green-h font-extrabold">{{ $servicePost.Title}}</h2>
-            {{ $servicePost.Content }}
-            <button></button>
+        {{ $link := $servicePost.Params.title }}
+        {{ $link = replace $link " " "-" }}
+        {{ $serviceImage := resources.Get (printf "images/%s" $servicePost.Params.image) }}
+        {{ with $serviceImage }}
+            {{/*  {{ $image = $image.ToWebp }}  */}}
+            {{ $serviceImage = $serviceImage.Resize "300x jpg" }}
+        {{ end }}
+        <div class="w-[90vw] max-w-[312px] p-8 bg-darker-white rounded-2xl">
+            {{ if $serviceImage }}<img src="{{ $serviceImage.RelPermalink }}" class="w-[75%] mx-auto rounded-full">{{ end }}
+            <h2 class="text-center text-green-h font-extrabold font-condensed text-[1.25rem] py-4">{{ $servicePost.Title}}</h2>
+            <div class="text-[0.875rem]">{{ $servicePost.Content }}</div>
+            <div class="w-full flex justify-around bottom-0">
+                <a href="{{ $link }}" class="block bg-green-l w-fit py-3 px-6 text-2xl rounded-md">Learn More</a>
+            </div>
         </div>
         {{ end }}
     </div>
