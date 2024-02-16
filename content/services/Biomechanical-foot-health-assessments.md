@@ -1,6 +1,6 @@
 ---
 title: "Biomechanical Foot Health Assessments"
-image: ""
+image: "services.png"
 date: 2024-02-11T23:47:18-05:00
 draft: false
 weight: 9999

@@ -1,6 +1,6 @@
 ---
 title: "Custom Foot Orthotics"
-image: ""
+image: "services.png"
 date: 2024-02-11T23:48:41-05:00
 draft: false
 weight: 9999

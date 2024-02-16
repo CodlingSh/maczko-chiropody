@@ -1,6 +1,6 @@
 ---
 title: "Gait Analysis"
-image: ""
+image: "services.png"
 date: 2024-02-11T23:48:20-05:00
 draft: false
 weight: 9999
