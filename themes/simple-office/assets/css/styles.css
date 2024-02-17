@@ -21,7 +21,13 @@
     border-bottom: 15px solid #f0f0f0;
     border-right: 15px solid transparent;
     position: absolute;
-    right: 6px;
+    right: 7px;
     bottom: 99.5%;
     z-index: 1000000;
 }
+
+@media only screen and (max-width: 337px) {
+    .logo {
+        height: 50%;
+    }
+  }
