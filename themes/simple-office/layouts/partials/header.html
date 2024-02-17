@@ -1,7 +1,7 @@
-<header class="z-20 bg-white top-0 h-[51px] border-b border-b-green-h sticky lg:h-[8.283vh]">
+<header class="z-20 bg-white top-0 h-[61px] border-b border-b-green-h sticky lg:h-[8.283vh]">
     <div class="w-[100%] max-w-[1320px] h-[100%] mx-auto flex items-center justify-between">
-        <img src="/images/logo.png" class="h-[70%] block pl-[5px] md:pl-[0px] md:h-[60%]">
-        <div id="burger" class="z-30 h-[100%] w-[50px] bg-green-h flex flex-col justify-between p-2 md:hidden">
+        <img src="/images/logo.png" class="logo h-[60%] block pl-[5px] md:pl-[0px] md:h-[60%]">
+        <div id="burger" class="z-30 h-[100%] w-[60px] bg-green-h flex flex-col justify-between p-2 md:hidden">
             <span id="top_bun" class="w-[100%] h-[5px] bg-white rounded-lg origin-left"></span>
             <span id="patty" class="w-[100%] h-[5px] bg-white rounded-lg"></span>
             <span id="bottom_bun" class="w-[100%] h-[5px] bg-white rounded-lg origin-left"></span>
@@ -14,10 +14,10 @@
     </div>
 </header>
 
-<div id="nav_menu" class="z-30 rounded-md fixed flex flex-col bg-white right-1 top-[3.5rem] w-[250px] transform translate-x-72 transition-transform duration-300">
+<div id="nav_menu" class="z-30 rounded-md fixed flex flex-col bg-white right-[7px] top-[68px] w-[250px] transform translate-x-72 transition-transform duration-300">
     {{ range .Site.Menus.main }}
-    <a href="{{ .URL }}" class="py-4">
-        <div class="flex justify-between w-[80%] mx-auto">
+    <a href="{{ .URL }}" class="py-6">
+        <div class="flex justify-between w-[80%] mx-auto font-bold text-2xl">
         {{ .Name }}
         <svg class="h-[24px] w-[24px]" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path></svg>
         </div>    </a>
