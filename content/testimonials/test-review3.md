@@ -6,6 +6,4 @@ weight: 9999
 headless: true
 ---
 
-The quick brown fox jumps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jumps over the lazy dog 
-
-The quick brown fox jumps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jumps over the lazy dog 
+Efficient, friendly staff like Becki & Jaime make this clinic top-notch. Becki's clear communication & personalized service stood out, while Jaime's attentiveness & thorough treatments impressed. Highly recommend for foot issues.

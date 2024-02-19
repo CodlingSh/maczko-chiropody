@@ -1,9 +1,9 @@
 ---
-reviewer: "Jeff Donaldson"
+reviewer: "Gwen"
 date: 2024-02-18T01:36:18-05:00
 draft: false
 weight: 9999
 headless: true
 ---
 
-Everyone is friendly, professional, and easy to work with. I am especially impressed by Becki, the woman who was working at the front desk when I was in. Becki can clearly communicate with people on the phone, provided as many as possible choices for appointments, and somehow always remembers my name. Jaime is also great; he listens and provides all possible treatments to patients. I am also sure that the other doctor is great as well. Overall I am satisfied with their services. I often recommend this clinic to people who are having foot trouble.
+I have been a patient of Jamie's for many years.  He treatments allow me to continue an active lifestyle into my 80s.  His neat, clean, facilities are well organized.  Staff are polite and very helpful.  And, when he's off on vacation, his two young associates do excellent work.  I've recommended him to several of our friends; they're now recommending him to their friends.
