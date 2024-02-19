@@ -67,9 +67,11 @@
         <h2 class="text-[2.5rem] mx-auto text-center text-green-h font-extrabold">Patient Testimonials</h2>
         <div class="h-[5px] mb-4 bg-gray rounded-md"></div>
     </div>
-    <div class="flex w-[100vw] overflow-x-scroll whitespace-normal">
+    <div class="flex w-[100vw] overflow-x-hidden whitespace-normal">
         {{ range $testimonial := (where .Site.RegularPages "Type" "testimonials") }}
-             <div class="w-[80vw] max-w-[300px] shrink-0 mx-4 border border-red-500 p-4">{{ $testimonial.Content }}</div>
+            <div class="w-[100vw] shrink-0 flex">
+                <div class="w-[90vw] max-w-[300px] mx-auto items-stretch border border-green-500 p-8">{{ $testimonial.Content }}</div>
+            </div>
         {{ end }}
     </div>
 </section>
