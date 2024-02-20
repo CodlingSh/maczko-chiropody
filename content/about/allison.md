@@ -1,6 +1,6 @@
 ---
 name: "Allison Deery"
-image: ""
+image: "Allison.png"
 date: 2024-01-30T22:04:49-05:00
 draft: true
 author: "Sheldon Codling"
