@@ -1,7 +1,12 @@
 {{ define "main" }}
 
     <div class="h-[3.579vh] bg-green-m"></div>
-    {{ .Content -}}
-    <p>This is a single</p>
-
+    <div class="my-4">
+        <h2 class="text-[2.5rem] w-[95%] mx-auto text-center text-green-h font-extrabold font-condensed">{{ .Title }}</h2>
+        <div class="h-[5px] bg-gray rounded-md "></div>
+    </div>
+    <article class="article_content">
+        {{ .Content -}}
+    </article>
+    
 {{ end }}
