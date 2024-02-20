@@ -7,8 +7,14 @@
     margin-bottom: 0.75rem
 }
 
-.article_content > p {
+.article_content > p,
+.article_content > ul {
     margin-bottom: 1.5rem;
+}
+
+ul, ol {
+    padding-left: 40px;
+    list-style-type: disc;
 }
 
 .hero-sect-bg {
