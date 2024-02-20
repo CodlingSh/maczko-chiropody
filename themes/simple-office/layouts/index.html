@@ -40,7 +40,7 @@
     </div>
     <div class="grid grid-cols-1 gap-4 mx-auto w-fit sm:grid-cols-2 xl:grid-cols-4">
     {{/*  <section class="flex justify-between flex-wrap max-w-[1320px] w-[95%] mx-auto">  */}}
-        {{ $servicePosts := (where .Site.RegularPages "Type" "services") }}
+        {{ $servicePosts := (where .Site.RegularPages "Type" "service") }}
         {{ range $index, $servicePost := $servicePosts }}
         {{ $link := $servicePost.Params.title }}
         {{ $link = replace $link " " "-" }}
