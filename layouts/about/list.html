@@ -1,18 +1,27 @@
 {{ define "main" }}
 
-<div class="mb-[1.5em] lg:flex justify-between items-center">
-    <div class="h-[5px] w-[100%] bg-gray"></div>
-    <h2 class="m-[0px] text-center font-bold text-2xl px-[20px] font-condensed lg:whitespace-nowrap">ABOUT US</h2>
-    <div class="h-[5px] w-[100%] bg-gray"></div>
-</div>
+<div class="h-[3.579vh] bg-green-m"></div>
+    <div class="my-4">
+        <h2 class="text-[2.5rem] w-[95%] mx-auto text-center text-green-h font-extrabold font-condensed">About Us</h2>
+        <div class="h-[5px] bg-gray rounded-md "></div>
+    </div>
 
     {{ range (where .Site.RegularPages "Type" "in" "about")}}
-        <article class="max-w-full mb-[60px] px-[40px] mx-auto">
-            <div class="article_content px-[5%]">
-                <h2>{{ .Title }}</h2>
-                <p>{{ .Content }}</p>
+    {{ $image := resources.Get (printf "images/portraits/%s" .Params.image)}}
+        <article class="w-[95vw] max-w-[1320px] mx-auto">
+            <div class="w-fit mx-auto">
+                <h2 class="text-[2.5rem] text-center text-green-h font-extrabold font-condensed text-nowrap">{{ .Title }}</h2>
+                <div class="h-[5px] bg-gray rounded-md "></div>
             </div>
+            <div class="flex flex-col-reverse">
+                <div>{{ .Content }}</div>
+                {{ if $image }}
+                    <img src="{{ $image.RelPermalink }}">
+                {{ end }}
+            </div>
+            
         </article> <!-- Display post summary or content as needed -->
     {{ end }}
+
 
 {{ end }}
