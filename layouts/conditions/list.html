@@ -1,0 +1,27 @@
+{{ define "main" }}
+
+<div class="h-[3.579vh] bg-green-m"></div>
+    <div class="my-4">
+        <h2 class="text-[2.5rem] w-[95%] mx-auto text-center text-green-h font-extrabold font-condensed">Foot Conditions</h2>
+        <div class="h-[5px] bg-gray rounded-md "></div>
+    </div>
+
+    {{ range (where .Site.RegularPages "Type" "in" "conditions")}}
+    {{ $image := resources.Get (printf "images/foot_conditions/%s" .Params.image)}}
+        <article class="w-[95vw] max-w-[1320px] mx-auto">
+            <div class="w-fit mx-auto">
+                <h2 class="text-[1.5rem] text-center text-green-h font-extrabold font-condensed text-nowrap">{{ .Params.name }}</h2>
+                <div class="h-[5px] bg-gray rounded-md mb-4"></div>
+            </div>
+            <div class="flex flex-col-reverse">
+                <div class="article_content">{{ .Content }}</div>
+                {{ if $image }}
+                    <img src="{{ $image.RelPermalink }}">
+                {{ end }}
+            </div>
+            
+        </article> <!-- Display post summary or content as needed -->
+    {{ end }}
+
+
+{{ end }}
