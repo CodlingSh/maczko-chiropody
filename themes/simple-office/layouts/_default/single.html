@@ -1,11 +1,11 @@
 {{ define "main" }}
 
     <div class="h-[3.579vh] bg-green-m"></div>
-    <div class="my-4">
+    <div class="my-4 lg:my-8">
         <h2 class="text-[2.5rem] w-[95%] mx-auto text-center text-green-h font-extrabold font-condensed">{{ .Title }}</h2>
         <div class="h-[5px] bg-gray rounded-md "></div>
     </div>
-    <article class="article_content">
+    <article class="article_content w-[1320px] max-w-[95vw] mx-auto lg:my-8">
         {{ .Content -}}
     </article>
     
