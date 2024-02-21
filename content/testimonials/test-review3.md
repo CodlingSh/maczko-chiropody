@@ -1,5 +1,5 @@
 ---
-reviewer: "Ninja Master Gordon"
+reviewer: "Gordon"
 date: 2024-02-18T01:40:56-05:00
 draft: false
 weight: 9999
