@@ -3,7 +3,7 @@ title: "{{ replace .Name "-" " " | title }}"
 date: {{ .Date }}
 image_name: "null"
 weight: 9999
-draft: true
+draft: false
 headless: true
 ---
 
