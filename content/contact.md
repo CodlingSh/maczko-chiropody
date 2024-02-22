@@ -14,6 +14,4 @@ Then please download and complete our general intake form and bring it in with y
 
 {{< linkButtons text="Download Form" link="about" >}}
 
-{{< section >}}
-This is a test
-{{< /section >}}
+{{}}
