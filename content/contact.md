@@ -14,4 +14,7 @@ Then please download and complete our general intake form and bring it in with y
 
 {{< linkButtons text="Download Form" link="about" >}}
 
-{{}}
+{{< section >}}
+Our office is located at 559 Exmouth Street Sarnia, ON, Canada
+{{< /section >}}
+
