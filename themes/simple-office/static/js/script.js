@@ -6,7 +6,6 @@ function navToggle() {
     const opacityLayer = document.getElementById("opacity_layer");
 
     // Disable to scrolling
-    //TODO: Write this logic
     document.body.classList.toggle("overflow-y-hidden");
 
     // Toggle the opacity
@@ -27,8 +26,27 @@ function navToggle() {
     navMenu.classList.toggle("translate-x-72");
 }
 
+// Function to control shifting the testimonial to the right
+function testimonialShift(direction) {
+    const testimonialSection = document.getElementById("testimonial_section");
+    const currentScrollPos = testimonialSection.scrollLeft;
+    const screenSize = window.innerWidth;
+    let futureScrollPos;
+    
+    if (direction === "right") {
+        testimonialSection.scroll({left: currentScrollPos + screenSize, behavior: "smooth"});
+    } else if (direction === "left") {
+        testimonialSection.scroll({left: currentScrollPos - screenSize, behavior: "smooth"});
+    }
+
+
+    console.log("TEST!!!")
+}
+
 // Click events
 document.getElementById("burger").addEventListener("click", navToggle);
 document.getElementById("opacity_layer").addEventListener("click", navToggle);
+document.getElementById("left_btn").addEventListener("click", () => {testimonialShift("left")});
+document.getElementById("right_btn").addEventListener("click", () => {testimonialShift("right")});
 
 console.log(document.body.style.overflowY);
