@@ -11,19 +11,18 @@
     {{ with $image }}
         {{ $image = $image.Resize "600x jpg"}}
     {{ end }}
-        <article class="w-[95vw] max-w-[1320px] mx-auto">
+        <article class="w-[95vw] max-w-[1320px] mx-auto my-12">
             <div class="w-fit mx-auto">
                 <h2 class="text-[2.5rem] text-center text-green-h font-extrabold font-condensed text-nowrap">{{ .Title }}</h2>
                 <div class="h-[5px] bg-gray rounded-md mb-4"></div>
             </div>
-            <div class="flex flex-col-reverse">
-                <div class="article_content">{{ .Content }}</div>
+            <div class="flex flex-col-reverse items-start mx-auto justify-center md:flex-row">
+                <div class="article_content lg:mr-12 mx-auto max-w-[620px]">{{ .Content }}</div>
                 {{ if $image }}
-                    <img src="{{ $image.RelPermalink }}">
+                    <img class="rounded-2xl w-1/2 mx-auto max-w-[400px] mb-4 md:mb-0" src="{{ $image.RelPermalink }}" width="400">
                 {{ end }}
             </div>
-            
-        </article> <!-- Display post summary or content as needed -->
+        </article>
     {{ end }}
 
 
