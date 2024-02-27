@@ -1,5 +1,5 @@
 ---
-title: "Jaime Maczko"
+title: "Jaime Mazcko"
 image: "Jaime.png"
 date: 2023-03-31T14:59:13-04:00
 draft: false
@@ -18,10 +18,10 @@ In 1985 Jamie introduced the profession of chiropody to Sarnia/Lambton and helpe
 
 Throughout the years, in addition to his hospital position, Jamie has always provided additional services through Maczko Chiropody and Orthotic Centre on a part time basis. Following the closure of the Bluewater Health Chiropody Clinic, Jamie opened a full time private practice in a custom built office at 559 Exmouth Street. This beautiful treatment centre provides quality services in a relaxing ground floor facility.
 
-Jamie has been married to his wife Kathy for 38 years and are the parents of three amazing children.
+Jamie has been married to his wife Kathy for 40 years and are the parents of three amazing children.
 
-- Sarah, a graduate of the University of Guelph, employed at Blackberry as a Senior Analyst. She is married to Chris and they have five children, Ava, Paige, Sadie, Piper, and Zack.
+- Sarah, a graduate of the University of Guelph, was employed at Blackberry as a Senior Analyst, Recently she joined Miovision as a Product Manager. She is married to Chris and they have five children, Ava, Paige, Sadie, Piper, and Zack.
 
-- James, a graduate of York University Toronto, with an Honours Fine Arts Degree in Theatre and Television. He is an actor, married to Desiree with a daughter Olive, and live in Niagara Falls.
+- James, a graduate of York University Toronto, with an Honours Fine Arts Degree in Theatre and Television. Formerly he was an actor, and currently he is employed in industry and process operations. He has a daughter Olive, and they currently live in Niagara Falls.
 
 - David, a graduate of Lambton College Instrumentation program is employed at Arlanxeo in Sarnia. He is married to Erica with a son Ryder, and a daughter Skyla.
