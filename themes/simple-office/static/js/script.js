@@ -38,9 +38,6 @@ function testimonialShift(direction) {
     } else if (direction === "left") {
         testimonialSection.scroll({left: currentScrollPos - screenSize, behavior: "smooth"});
     }
-
-
-    console.log("TEST!!!")
 }
 
 // Click events
