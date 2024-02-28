@@ -5,8 +5,8 @@
         <h2 class="text-[2.5rem] w-[95%] mx-auto text-center text-green-h font-extrabold font-condensed">{{ .Title }}</h2>
         <div class="h-[5px] bg-gray rounded-md "></div>
     </div>
-    <article class="article_content w-[1320px] max-w-[95vw] mx-auto lg:my-8">
-        {{ .Content -}}
+    <article class="w-[1320px] max-w-[95vw] mx-auto lg:my-8">
+        <div class="article_content max-w-[620px] mx-auto">{{ .Content -}}</div>
     </article>
     
 {{ end }}
