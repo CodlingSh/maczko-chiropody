@@ -678,16 +678,16 @@ video {
   display: none;
 }
 
+.\!h-16{
+  height: 4rem !important;
+}
+
 .h-10{
   height: 2.5rem;
 }
 
 .h-14{
   height: 3.5rem;
-}
-
-.h-16{
-  height: 4rem;
 }
 
 .h-20{
@@ -754,6 +754,10 @@ video {
   height: 78.016vh;
 }
 
+.\!w-16{
+  width: 4rem !important;
+}
+
 .w-1\/2{
   width: 50%;
 }
@@ -764,10 +768,6 @@ video {
 
 .w-14{
   width: 3.5rem;
-}
-
-.w-16{
-  width: 4rem;
 }
 
 .w-40{
@@ -1047,11 +1047,6 @@ video {
   background-color: rgb(3 97 12 / var(--tw-bg-opacity));
 }
 
-.bg-green-l{
-  --tw-bg-opacity: 1;
-  background-color: rgb(144 229 143 / var(--tw-bg-opacity));
-}
-
 .bg-green-m{
   --tw-bg-opacity: 1;
   background-color: rgb(44 159 42 / var(--tw-bg-opacity));
@@ -1293,6 +1288,34 @@ video {
   margin-bottom: 1.5rem;
 }
 
+.btn {
+  display: block;
+  background-image: url(../images/btnBg.png), linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
+  text-shadow: -1px -1px 0.5px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.5), inset 0px 2px 1px 0px rgba(255, 255, 255, 0.75);
+  width: -moz-fit-content;
+  width: fit-content;
+  font-weight: 700;
+  padding-top: 1.0625rem;
+  padding-bottom: 0.75rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  font-size: 1.5rem;
+  border-radius: 9999px;
+  margin: 0 auto;
+  cursor: pointer;
+  transition: background-color 200ms ease-in-out, transform 200ms ease-in-out
+}
+
+/* .btn {
+    display: inline-block;
+    line-height: 1;
+    height: auto;
+    padding: 5px;
+    background-color: lightgray;
+    text-decoration: none;
+} */
+
 ul, ol {
   padding-left: 40px;
   list-style-type: disc;
@@ -1317,6 +1340,26 @@ ul, ol {
   .logo {
     height: 50%;
   }
+}
+
+.hover\:bg-\[\#56B254\]:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(86 178 84 / var(--tw-bg-opacity));
+}
+
+.active\:translate-y-0:active{
+  --tw-translate-y: 0px;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.active\:translate-y-0\.5:active{
+  --tw-translate-y: 0.125rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.active\:bg-\[\#237f21\]:active{
+  --tw-bg-opacity: 1;
+  background-color: rgb(35 127 33 / var(--tw-bg-opacity));
 }
 
 @media (min-width: 640px){
@@ -1437,8 +1480,7 @@ ul, ol {
     padding: 2rem;
   }
 
-  .lg\:py-\[6rem\]{
-    padding-top: 6rem;
+  .lg\:pb-\[6rem\]{
     padding-bottom: 6rem;
   }
 
