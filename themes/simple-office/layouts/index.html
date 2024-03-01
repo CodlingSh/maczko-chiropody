@@ -12,22 +12,26 @@
     {{ $image = $image.Resize "600x jpg" }}
 {{ end }}
     {{ if eq (mod $index 2) 0 }}
-    <section class="max-w-[1320px] w-[95%] mx-auto mt-[2rem] mb-[6rem] lg:my-[11rem] flex flex-col justify-between items-start lg:flex-row">
+    <section class="max-w-[1320px] w-[95%] mx-auto mt-[2rem] mb-[6rem] lg:my-[11rem] flex flex-col-reverse justify-between items-start lg:flex-row">
     {{ else if eq (mod $index 2) 1 }}
-    <section class="max-w-[1320px] w-[95%] mx-auto mt-[2rem] mb-[6rem] lg:my-[11rem] flex flex-col justify-between items-start lg:flex-row-reverse">
+    <section class="max-w-[1320px] w-[95%] mx-auto mt-[2rem] mb-[6rem] lg:my-[11rem] flex flex-col-reverse justify-between items-start lg:flex-row-reverse">
     {{ end }}
             <div class="max-w-[600px] article_content mx-auto lg:mx-0">
-                <h2 class="text-3xl w-[95%] mx-auto text-center text-green-h font-bold lg:text-4xl">{{ $homePost.Title }}</h2>
-                <div class="h-[5px] bg-gray rounded-md"></div>
+                <h2 class="hidden text-3xl w-[95%] mx-auto text-center text-green-h font-bold lg:text-4xl lg:block">{{ $homePost.Title }}</h2>
+                <div class="hidden h-[5px] bg-gray rounded-md lg:block"></div>
                 {{ $homePost.Content }}
             </div>
             {{ if $image }}
                 {{ if eq (mod $index 2) 0 }}
-                <img src="{{ $image.RelPermalink }}" class="service_img w-[90%] max-w-[600px] h-auto rounded-2xl mx-auto lg:ml-[3rem] lg:mx-0">
+                <img src="{{ $image.RelPermalink }}" class="service_img w-[90%] max-w-[600px] h-auto rounded-2xl mx-auto my-4 lg:ml-[3rem] lg:mx-0 lg:my-0">
                 {{ else if eq (mod $index 2) 1 }}
-                <img src="{{ $image.RelPermalink }}" class="service_img w-[90%] max-w-[600px] h-auto rounded-2xl mx-auto lg:mr-[3rem] lg:mx-0">
+                <img src="{{ $image.RelPermalink }}" class="service_img w-[90%] max-w-[600px] h-auto rounded-2xl mx-auto my-4 lg:mr-[3rem] lg:mx-0 lg:my-0">
                 {{ end }}
             {{ end }}
+            <div class="max-w-[600px] mx-auto lg:mx-0 w-full lg:hidden">
+                <h2 class="text-3xl w-[95%] mx-auto text-center text-green-h font-bold lg:text-4xl">{{ $homePost.Title }}</h2>
+                <div class="h-[5px] bg-gray rounded-md"></div>
+            </div>
     </section>
 {{ end }}
 
@@ -66,8 +70,8 @@
     </div>
     <div class="arrow_wrapper relative my-4">
         <div class="w-40 flex justify-between mx-auto">
-            <div id="left_btn" class="!h-16 !w-16 p-[12px] bg-green-m btn hover:bg-[#56B254] active:bg-[#237f21] active:translate-y-0.5"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='none' stroke='#ffffff' stroke-width='8' stroke-linecap='round' stroke-linejoin='round'><polyline fill="none" points="70,10 20,50 70,90 "/></svg></div>
-            <div id="right_btn" class="!h-16 !w-16 p-[12px] bg-green-m btn hover:bg-[#56B254] active:bg-[#237f21] active:translate-y-0.5"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='none' stroke='#ffffff' stroke-width='8' stroke-linecap='round' stroke-linejoin='round'><polyline fill="none" points="30,10 80,50 30,90 "/></svg></div>
+            <div id="left_btn" class="!h-16 !w-16 !p-2 bg-green-m btn hover:bg-[#56B254]"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='none' stroke='#ffffff' stroke-width='8' stroke-linecap='round' stroke-linejoin='round'><polyline fill="none" points="70,10 20,50 70,90 "/></svg></div>
+            <div id="right_btn" class="!h-16 !w-16 !p-2 bg-green-m btn hover:bg-[#56B254]"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='none' stroke='#ffffff' stroke-width='8' stroke-linecap='round' stroke-linejoin='round'><polyline fill="none" points="30,10 80,50 30,90 "/></svg></div>
         </div>
     </div>
     <div id="testimonial_section" class="pb-[4rem] lg:pb-[6rem] flex w-[100vw] overflow-x-hidden items-start whitespace-normal relative">
