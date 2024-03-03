@@ -68,29 +68,7 @@
         <h2 class="text-3xl lg:text-4xl mx-auto text-center text-green-h font-bold">Patient Testimonials</h2>
         <div class="h-[5px] bg-gray rounded-md"></div>
     </div>
-    <div class="arrow_wrapper relative my-4">
-        <div class="w-40 flex justify-between mx-auto">
-            <div id="left_btn" class="!h-16 !w-16 !p-2 bg-green-m btn hover:bg-[#56B254]"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='none' stroke='#ffffff' stroke-width='8' stroke-linecap='round' stroke-linejoin='round'><polyline fill="none" points="70,10 20,50 70,90 "/></svg></div>
-            <div id="right_btn" class="!h-16 !w-16 !p-2 bg-green-m btn hover:bg-[#56B254]"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='none' stroke='#ffffff' stroke-width='8' stroke-linecap='round' stroke-linejoin='round'><polyline fill="none" points="30,10 80,50 30,90 "/></svg></div>
-        </div>
-    </div>
-    <div id="testimonial_section" class="pb-[4rem] lg:pb-[6rem] flex w-[100vw] overflow-x-hidden items-start whitespace-normal relative">
-        {{ range $testimonial := (where .Site.RegularPages "Type" "testimonials") }}
-            <div class="w-[100vw] shrink-0 flex">
-                <div class="w-[90vw] max-w-[700px] mx-auto border shadow-2xl p-8">
-                    <div class="w-[110px] flex justify-around mb-4">
-                        <img src="images/star.svg" height="18" width="18">
-                        <img src="images/star.svg" height="18" width="18">
-                        <img src="images/star.svg" height="18" width="18">
-                        <img src="images/star.svg" height="18" width="18">
-                        <img src="images/star.svg" height="18" width="18">
-                    </div>
-                    <div class="mb-4">{{ $testimonial.Content }}</div>
-                    <p class="pl-4">- {{ $testimonial.Params.reviewer}}</p>
-                </div>
-            </div>
-        {{ end }}
-    </div>
+    {{ partial "carousel-old.html" . }}
 </section>
 
 
