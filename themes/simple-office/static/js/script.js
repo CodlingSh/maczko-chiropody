@@ -1,4 +1,6 @@
 "use strict";
+// Global variables
+let scrollIndex = 0;
 
 // Function to control the nav menu
 function navToggle() {
@@ -31,12 +33,16 @@ function testimonialShift(direction) {
     const testimonialSection = document.getElementById("testimonial_section");
     const currentScrollPos = testimonialSection.scrollLeft;
     const screenSize = window.innerWidth;
-    let futureScrollPos;
+    // let futureScrollPos;
     
     if (direction === "right") {
-        testimonialSection.scroll({left: currentScrollPos + screenSize, behavior: "smooth"});
+        console.log("ligma")
+        scrollIndex += 1;
+        testimonialSection.style.transform = "translateX(-" + (554.5 + (794 * scrollIndex)) + "px)";
+        console.log(554.5 + (794 * scrollIndex));
+        // testimonialSection.scroll({left: currentScrollPos + screenSize, behavior: "smooth"});
     } else if (direction === "left") {
-        testimonialSection.scroll({left: currentScrollPos - screenSize, behavior: "smooth"});
+        // testimonialSection.scroll({left: currentScrollPos - screenSize, behavior: "smooth"});
     }
 }
 
