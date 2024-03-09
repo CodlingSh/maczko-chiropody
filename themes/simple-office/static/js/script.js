@@ -36,14 +36,14 @@ function testimonialShift(direction) {
     // let futureScrollPos;
     
     if (direction === "right") {
-        console.log("ligma")
         scrollIndex += 1;
-        testimonialSection.style.transform = "translateX(-" + (554.5 + (794 * scrollIndex)) + "px)";
-        console.log(554.5 + (794 * scrollIndex));
-        // testimonialSection.scroll({left: currentScrollPos + screenSize, behavior: "smooth"});
     } else if (direction === "left") {
-        // testimonialSection.scroll({left: currentScrollPos - screenSize, behavior: "smooth"});
+        scrollIndex -= 1;
     }
+
+    testimonialSection.style.transform = "translateX(" + (796 * scrollIndex * -1) + "px)";
+
+    console.log(testimonialSection.style.transform);
 }
 
 // Click events
