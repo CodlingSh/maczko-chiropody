@@ -1,6 +1,7 @@
 "use strict";
+
 // Global variables
-let scrollIndex = 0;
+// let scrollIndex = 0;
 
 // Function to control the nav menu
 function navToggle() {
@@ -28,8 +29,27 @@ function navToggle() {
     navMenu.classList.toggle("translate-x-72");
 }
 
+
+// Get the width of all testimonials
+function getTestimonialWidth() {
+    const testimonial = document.getElementsByClassName("testimonial")[0];
+    const computedStyle = window.getComputedStyle(testimonial);
+    
+    return testimonial.offsetWidth + parseFloat(computedStyle.getPropertyValue("margin-right").slice(0, -2) * 2);
+}
+
+// On load, scroll the testimonials to the second section to make the illusion of infinite spinning
+function transitionTestimonial() {
+    const leftShift = (window.innerWidth - getTestimonialWidth()) / 2;
+    const numTestimonials = document.querySelector("#testimonial_section").children.length / 3;
+
+    // return "translateX(-" + (numTestimonials * getTestimonialWidth()) + ")px";
+    document.querySelector("#testimonial_section").style.transform = "translateX(-" + (796 * numTestimonials - leftShift) + "px)"
+}
+
 // Function to control shifting the testimonial to the right
 function testimonialShift(direction) {
+    const leftShift = (window.innerWidth - getTestimonialWidth()) / 2;
     const testimonialSection = document.getElementById("testimonial_section");
     const currentScrollPos = testimonialSection.scrollLeft;
     const screenSize = window.innerWidth;
@@ -49,7 +69,9 @@ function testimonialShift(direction) {
 // Click events
 document.getElementById("burger").addEventListener("click", navToggle);
 document.getElementById("opacity_layer").addEventListener("click", navToggle);
-document.getElementById("left_btn").addEventListener("click", () => {testimonialShift("left")});
-document.getElementById("right_btn").addEventListener("click", () => {testimonialShift("right")});
+// document.getElementById("left_btn").addEventListener("click", () => {testimonialShift("left")});
+// document.getElementById("right_btn").addEventListener("click", () => {testimonialShift("right")});
+
+// window.addEventListener("load", transitionTestimonial);
 
 console.log(document.body.style.overflowY);
