@@ -1,11 +1,41 @@
+{{ $testimonials := (where .Site.RegularPages "Type" "testimonials") }}
+{{ $testimonialsCount := len $testimonials}}
+{{ $initialShift := mul $testimonialsCount 796}}
+
 <div class="testimonial_wrapper relative">
     <div class="arrow_wrapper flex justify-between mx-auto">
         <div id="left_btn" class="!h-16 !w-16 !p-2 bg-green-m btn hover:bg-[#56B254]"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='none' stroke='#ffffff' stroke-width='8' stroke-linecap='round' stroke-linejoin='round'><polyline fill="none" points="70,10 20,50 70,90 "/></svg></div>
         <div id="right_btn" class="!h-16 !w-16 !p-2 bg-green-m btn hover:bg-[#56B254]"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='none' stroke='#ffffff' stroke-width='8' stroke-linecap='round' stroke-linejoin='round'><polyline fill="none" points="30,10 80,50 30,90 "/></svg></div>
     </div>
-    <div id="testimonial_section" class="pb-[4rem] px-[554.5px] lg:pb-[6rem] flex w-fit overflow-x-hidden items-stretch whitespace-normal relative transition-transform">
-        {{ range $testimonial := (where .Site.RegularPages "Type" "testimonials") }}
-        <div class="w-[90vw] max-w-[700px] m-12 shrink-0 rounded-2xl shadow-xl p-8 border border-darker-white">
+    <div id="testimonial_section" class="pb-[4rem] lg:pb-[6rem] flex w-fit overflow-x-hidden items-stretch whitespace-normal relative transition-transform">
+        {{ range $testimonial := $testimonials }}
+        <div class="testimonial w-[90vw] max-w-[700px] m-12 shrink-0 rounded-2xl shadow-xl p-8 border border-darker-white">
+            <div class="w-[110px] flex justify-around mb-4">
+                <img src="images/star.svg" height="18" width="18">
+                <img src="images/star.svg" height="18" width="18">
+                <img src="images/star.svg" height="18" width="18">
+                <img src="images/star.svg" height="18" width="18">
+                <img src="images/star.svg" height="18" width="18">
+            </div>
+            <div class="mb-4">{{ $testimonial.Content }}</div>
+            <p class="pl-4"><strong>- {{ $testimonial.Params.reviewer}}</strong></p>
+        </div>
+        {{ end }}
+        {{ range $testimonial := $testimonials }}
+        <div class="testimonial w-[90vw] max-w-[700px] m-12 shrink-0 rounded-2xl shadow-xl p-8 border border-darker-white">
+            <div class="w-[110px] flex justify-around mb-4">
+                <img src="images/star.svg" height="18" width="18">
+                <img src="images/star.svg" height="18" width="18">
+                <img src="images/star.svg" height="18" width="18">
+                <img src="images/star.svg" height="18" width="18">
+                <img src="images/star.svg" height="18" width="18">
+            </div>
+            <div class="mb-4">{{ $testimonial.Content }}</div>
+            <p class="pl-4"><strong>- {{ $testimonial.Params.reviewer}}</strong></p>
+        </div>
+        {{ end }}
+        {{ range $testimonial := $testimonials }}
+        <div class="testimonial w-[90vw] max-w-[700px] m-12 shrink-0 rounded-2xl shadow-xl p-8 border border-darker-white">
             <div class="w-[110px] flex justify-around mb-4">
                 <img src="images/star.svg" height="18" width="18">
                 <img src="images/star.svg" height="18" width="18">
